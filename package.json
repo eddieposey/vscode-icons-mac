@@ -47,7 +47,7 @@
     "activationEvents": [
         "*"
     ],
-    "main": "./out/src/",
+    "main": "./out/src/index.js",
     "contributes": {
         "iconThemes": [
             {

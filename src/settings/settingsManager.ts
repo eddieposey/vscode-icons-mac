@@ -26,17 +26,20 @@ export class SettingsManager implements ISettingsManager {
     const isDev = /dev/i.test(this.vscode.env.appName);
     const isOSS = !isDev && /oss/i.test(this.vscode.env.appName);
     const isInsiders = /insiders/i.test(this.vscode.env.appName);
+    const isCodium = /codium/i.test(this.vscode.env.appName);
     const vscodeVersion = new semver.SemVer(this.vscode.version).version;
     const isWin = /^win/.test(process.platform);
     const vscodeAppName = process.env.VSCODE_PORTABLE
       ? 'user-data'
-      : isInsiders
-        ? 'Code - Insiders'
-        : isOSS
-          ? 'Code - OSS'
-          : isDev
-            ? 'code-oss-dev'
-            : 'Code';
+      : isCodium
+        ? 'VSCodium'
+        : isInsiders
+          ? 'Code - Insiders'
+          : isOSS
+            ? 'Code - OSS'
+            : isDev
+              ? 'code-oss-dev'
+              : 'Code';
     const appPath = process.env.VSCODE_PORTABLE || getAppPath();
     const vscodeAppUserPath = pathUnixJoin(appPath, vscodeAppName, 'User');
     const workspacePath = this.getWorkspacePath();

@@ -6,13 +6,15 @@ import { ErrorHandler } from '../errorHandler';
 export function getAppUserPath(dirPath: string): string {
   const vscodeAppName = /[\\|/]\.vscode-oss-dev/i.test(dirPath)
     ? 'code-oss-dev'
-    : /[\\|/]\.vscode-oss/i.test(dirPath)
-      ? 'Code - OSS'
-      : /[\\|/]\.vscode-insiders/i.test(dirPath)
-        ? 'Code - Insiders'
-        : /[\\|/]\.vscode/i.test(dirPath)
-          ? 'Code'
-          : 'user-data';
+    : /[\\|/]\.vscodium/i.test(dirPath)
+      ? 'VSCodium'
+      : /[\\|/]\.vscode-oss/i.test(dirPath)
+        ? 'Code - OSS'
+        : /[\\|/]\.vscode-insiders/i.test(dirPath)
+          ? 'Code - Insiders'
+          : /[\\|/]\.vscode/i.test(dirPath)
+            ? 'Code'
+            : 'user-data';
   // workaround until `process.env.VSCODE_PORTABLE` gets available
   const vscodePortable = () => {
     if (vscodeAppName !== 'user-data') {
