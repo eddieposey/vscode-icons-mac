@@ -3,26 +3,26 @@
     "displayName": "vscode-icons-mac",
     "description": "Icons for Visual Studio Code (with classic mac folder icon)",
     "version": "7.25.3",
-    "publisher": "wayou",
+    "publisher": "eddieposey",
     "license": "MIT",
     "author": {
-        "email": "liuwayong@gmail.com",
+        "email": "debate-14fast@icloud.com",
         "name": "Wayou Liu",
-        "url": "http://github.com/wayou"
+        "url": "http://github.com/eddieposey"
     },
     "maintainers": [
         {
-            "email": "liuwayong@gmail.com",
+            "email": "debate-14fast@icloud.com",
             "name": "Wayou Liu"
         }
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/wayou/vscode-icons"
+        "url": "https://github.com/eddieposey/vscode-icons-mac"
     },
     "bugs": {
-        "url": "https://github.com/wayou/vscode-icons/issues",
-        "email": "liuwayong@gmail.com"
+        "url": "https://github.com/eddieposey/vscode-icons-mac/issues",
+        "email": "debate-14fast@icloud.com"
     },
     "engines": {
         "vscode": "^1.8.1",
